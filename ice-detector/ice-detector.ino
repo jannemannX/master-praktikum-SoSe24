@@ -2,6 +2,8 @@
 #include <PubSubClient.h>
 #include <Adafruit_MLX90640.h>
 
+// Note/TODO: It might make sense to only publish the temperature grid when the actual full image was taken (aka. 2 frames were read), to ensure that always a full image is published.
+
 const char* ssid = "SSID";
 const char* password = "PASSWORD"; 
 const char* mqtt_server = "localhost";
@@ -43,8 +45,9 @@ void setup() {
     Serial.println("MLX90640 not found!");
     while (1);
   }
-  mlx.setResolution(MLX90640_ADC_18BIT);
-  mlx.setRefreshRate(MLX90640_2_HZ);
+  mlx.setResolution(MLX90640_ADC_19BIT); // 19 bit is highest rate, lower rates might be sufficient, if power becomes a concern or i2c gets unstable
+  mlx.setRefreshRate(MLX90640_4_HZ); // at higher rates I2C might become unstable
+  mlx.setMode(MLX90640_CHESS); // chess = on every reading half the pixels are sampled, odd and even, thats why we use 4hz and publish results every 500ms.
 }
 
 void loop() {
@@ -61,8 +64,8 @@ void loop() {
       return;
     }
 
-    float ambientTemp = mlx.getTa(false);  // get ambient temperature
-    String payload = String(ambientTemp, 1);
+    float ambientTemp = mlx.getTa(false) - 8.0;  // get ambient temperature
+    String payload = String(ambientTemp, 2);
 
     // publish ambient temperature
     if (client.publish("ice_detector/ambient_temp", payload.c_str())) {
@@ -75,7 +78,7 @@ void loop() {
     for (uint8_t y = 0; y < 24; y++) {
       String rowPayload = "";
       for (uint8_t x = 0; x < 32; x++) {
-        rowPayload += String(frame[y * 32 + x], 1);
+        rowPayload += String(frame[y * 32 + x], 2);
         if (x < 31) rowPayload += ",";
       }
 
