@@ -20,6 +20,6 @@ graph TD
     end
 
     subgraph lehre.bpm.in.tum.de
-        Process -->|HTTP POST /predict| Prediction_Service
+        Process -->|HTTP POST /ice| Prediction_Service
     end
 ```
