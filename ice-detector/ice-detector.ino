@@ -64,7 +64,7 @@ void loop() {
       return;
     }
 
-    float ambientTemp = mlx.getTa(false) - 8.0;  // get ambient temperature
+    float ambientTemp = mlx.getTa(false) - 8.0;  // get ambient temperature, offset by -8.0°C if in free air
     String payload = String(ambientTemp, 2);
 
     // publish ambient temperature
