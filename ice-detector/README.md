@@ -1,0 +1,2 @@
+- install PubSubClient and Adafruit MLX90640 libraries
+- fill out correct values for ssid, password and mqtt server in the code
