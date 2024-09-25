@@ -1,7 +1,7 @@
 # Deployment
 1. Install the pip modules: `pip install -r requirements.txt`
 2. Create .env file by copying .env.example and filling in the values
-3. Run the server: `data-service app.py`
+3. Run the server: `python3 data-service.py`
 
 # Usage
 - GET `/temperature`: Get the temperature data in JSON format
