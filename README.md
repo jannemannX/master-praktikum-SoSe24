@@ -1,6 +1,6 @@
 # Ice Detection System using MLX90640
 
-This project implements an ice detection system using the **MLX90640 thermal sensor** and **ESP32 microcontroller**. The system communicates via MQTT and exposes data through an HTTP service, designed for integration in a robotic environment to ensure proper ice dispensing.
+This project implements an ice detection system using the **MLX90640 thermal sensor** and **ESP32 microcontroller**. The system communicates via MQTT and exposes raw thermal data through an HTTP service. Another HTTP service is used to detect if ice is present or how much ice is present from the thermal data. The complete ice detection process is implemented with the [Cloud Process Execution Engine](https://cpee.org). 
 
 ## Architecture
 
