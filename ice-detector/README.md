@@ -1,6 +1,9 @@
 # Setup Guide
 For working with the Ice-Detector device.
 
+## Hardware
+TODO
+
 ## Steps
 
 1. **Install the Arduino IDE**
