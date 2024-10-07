@@ -7,6 +7,10 @@ READMEs for each part of the system can be found in their respective folder. The
 ## Process
 For demonstration purposes we implemented a process that utilizes both the data service as well as the prediction service to add error detection and handling to the already existing ice dispension process.
 
+TODO link the process (and subprocesses)
+
+TODO insert a screenshot of the process
+
 TODO insert GIF of working process
 
 ## Architecture
