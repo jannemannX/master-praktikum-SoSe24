@@ -4,7 +4,9 @@ For working with the Ice-Detector device.
 ## Hardware
 TODO add list of parts
 
-TODO add picture of assembled hardware
+TODO add picture of assembled mlx with esp
+
+TODO add picture of enclosure and mention (+ attach .stl files)
 
 ## Steps
 
