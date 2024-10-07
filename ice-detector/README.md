@@ -2,7 +2,9 @@
 For working with the Ice-Detector device.
 
 ## Hardware
-TODO
+TODO add list of parts
+
+TODO add picture of assembled hardware
 
 ## Steps
 
