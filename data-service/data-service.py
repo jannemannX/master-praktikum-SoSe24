@@ -43,7 +43,7 @@ def on_message(client, userdata, msg):
         )
 
 
-mqtt_client = mqtt.Client()
+mqtt_client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 mqtt_client.on_message = on_message
 
 logging.debug("Connecting to MQTT broker...")
