@@ -2,8 +2,6 @@
 #include <PubSubClient.h>
 #include <Adafruit_MLX90640.h>
 
-// Note/TODO: It might make sense to only publish the temperature grid when the actual full image was taken (aka. 2 frames were read), to ensure that always a full image is published.
-
 const char *ssid = "YOUR_WIFI_SSID";
 const char *password = "YOUR_WIFI_PASSWORD";
 const char *mqtt_server = "YOUR_MQTT_SERVER_IP";
