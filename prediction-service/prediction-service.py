@@ -42,6 +42,7 @@ def predict_ice():
 
     cold_spots, total_points = count_cold_pixels(ambient_temp, grid, temp_threshold)
     ice_present = cold_spots / total_points > pixel_threshold
+    logger.info(f'Prediction: ice_present={ice_present}')
     return {'ice_present': ice_present}
 
 @app.post('/ice-percentage')
@@ -61,6 +62,7 @@ def predict_ice_percentage():
 
     cold_spots, total_points = count_cold_pixels(ambient_temp, grid, temp_threshold)
     percentage = (cold_spots / total_points) * 100
+    logger.info(f'Prediction: cold_pixel_percentage={percentage}')
     return {'cold_pixel_percentage': percentage}
 
 def log_request():
