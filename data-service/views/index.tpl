@@ -57,7 +57,7 @@
         <button id="applyRangeBtn" class="apply-range-btn">Apply Range</button>
         <div class="slider">
             <label for="intervalSlider">Update Interval (ms):</label>
-            <input type="range" id="intervalSlider" min="100" max="2000" step="100" value="1000">
+            <input type="range" id="intervalSlider" min="200" max="2000" step="100" value="1000">
             <span id="intervalValue">1000</span> ms
         </div>
     </div>
