@@ -1,6 +1,6 @@
 # Ice Detection System using MLX90640
 
-This project implements an ice detection system using the **MLX90640 thermal sensor** and **ESP32 microcontroller**. The system communicates via MQTT and exposes raw thermal data through an HTTP service (Data Service). Another HTTP service (Prediction Service) is used to detect if ice is present or how much ice is present from the thermal data. A complete ice detection process is implemented with the [Cloud Process Execution Engine](https://cpee.org) and can be found [here](https://cpee.org/hub/server/Teaching.dir/Prak.dir/TUM-Prak-24-SS.dir/IceDetectorDetection.xml).
+This project implements an ice detection system using the **MLX90640 thermal sensor** and **ESP32 microcontroller**. The system communicates via MQTT and exposes raw thermal data through an HTTP service (Data Service). Another HTTP service (Prediction Service) is used to detect if ice is present or how much ice is present from the thermal data. A complete ice detection process is implemented using the [Cloud Process Execution Engine](https://cpee.org) and can be found [here](https://cpee.org/hub/server/Teaching.dir/Prak.dir/TUM-Prak-24-SS.dir/IceDetectorDetection.xml).
 
 Instructions for the setup of each part can be found in their respective READMEs:
 - [Ice Detector Device](https://github.com/jannemannX/master-praktikum-SoSe24/blob/main/ice-detector/README.md)
