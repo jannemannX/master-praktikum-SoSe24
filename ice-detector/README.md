@@ -68,5 +68,10 @@ TODO add picture of enclosure and mention (+ attach .stl files)
    - Press and hold the boot button on the ESP32 board when the "Connecting" message appears.
    - You should be able to see output on the Serial Monitor (115200 baud rate) after the upload is complete.
 
+9. **Print and assemble the enclosure**
+   - Print the parts from the [3d_print folder](https://github.com/jannemannX/master-praktikum-SoSe24/edit/main/ice-detector/3d_print) or [Onshape](https://github.com/jannemannX/master-praktikum-SoSe24/edit/main/ice-detector/README.md](https://cad.onshape.com/documents/61ff36c19d567fb2cb1f912e/w/94b71816ca017b0d6549149e/e/821ef7029f7086ceb7cd349b?renderMode=0&uiState=671ccaab0768610ca459d367)
+   - Glue the camera protection onto the lid
+   - Assemble the rest
+
 # Usage
 TODO: Add usage instructions.
