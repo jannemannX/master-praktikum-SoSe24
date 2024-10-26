@@ -21,7 +21,7 @@ TODO insert GIF of working process
 ```mermaid
 graph TD
     subgraph Process Engine
-        Process -->|HTTP GET /temperature| Data_Service        
+        Process
     end
     subgraph Ice Detector Device
         MLX90640 -->|I2C| ESP32
@@ -29,6 +29,7 @@ graph TD
     ESP32 -->|MQTT Publish| MQTT_Broker
     subgraph Lab Machine
         Data_Service -->|MQTT Subscribe| MQTT_Broker
+        Process -->|HTTP GET /temperature| Data_Service
     end
     subgraph lehre.bpm.in.tum.de
         Process -->|HTTP POST /ice| Prediction_Service
