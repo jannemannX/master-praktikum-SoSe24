@@ -23,16 +23,13 @@ graph TD
     subgraph Process Engine
         Process -->|HTTP GET /temperature| Data_Service        
     end
-
     subgraph Ice Detector Device
         MLX90640 -->|I2C| ESP32
     end
     ESP32 -->|MQTT Publish| MQTT_Broker
-
     subgraph Lab Machine
         Data_Service -->|MQTT Subscribe| MQTT_Broker
     end
-
     subgraph lehre.bpm.in.tum.de
         Process -->|HTTP POST /ice| Prediction_Service
     end
