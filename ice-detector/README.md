@@ -1,5 +1,5 @@
 # Setup Guide
-For working with the Ice-Detector device.
+For working with the Ice Detector device.
 
 ## Hardware
 TODO add list of parts
