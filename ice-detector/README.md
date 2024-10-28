@@ -1,12 +1,18 @@
 # Setup Guide
-For working with the Ice Detector device.
+A DIY thermal imaging system that detects ice formation using an MLX90640 thermal camera and ESP32 microcontroller. The device continuously monitors surface temperatures and transmits data via MQTT for real-time ice detection. It is powered by a power bank and can be turned on and off using a physical button.
 
-## Hardware
-TODO add list of parts
+## Hardware Requirements
+- ESP32 Development Board (e.g., ESP32-WROOM-32)
+- MLX90640 Thermal Array
+- Breakout Board for MLX90640 (EVB)
+- [Anker PowerCore 5000mAh](https://www.amazon.de/dp/B01CU1EC6Y)
+- [USB-Cable with power button](https://www.amazon.de/dp/B0C9PQGHGT)
+- [Small flexible micro USB cable](https://www.amazon.de/dp/B071K8SW9P)
+- 3D Printed Enclosure (see setup step 10)
+- Jumper cables
+- Recommended: Non-conductive tape
 
-TODO add picture of assembled mlx with esp
-
-TODO add picture of enclosure and mention (+ attach .stl files)
+<img src="ice_detector.jpeg" height="400" alt="Ice Detector">
 
 ## Steps
 
@@ -68,10 +74,18 @@ TODO add picture of enclosure and mention (+ attach .stl files)
    - Press and hold the boot button on the ESP32 board when the "Connecting" message appears.
    - You should be able to see output on the Serial Monitor (115200 baud rate) after the upload is complete.
 
-9. **Print and assemble the enclosure**
+9. **Connect cables**
+   - Connect the MLX90640 breakout to the ESP32 (Look for the notch on the sensor and align it with the drawing on the breakout board)
+   - Follow the instructions in the PDF file [PMOD_MLX90640_DS_dt.pdf](https://github.com/jannemannX/master-praktikum-SoSe24/edit/main/ice-detector/PMOD_MLX90640_DS_dt.pdf) to connect the breakout to the ESP32.
+   - Connect the rest as shown below
+
+<img src="esp_and_mlx90640.jpg" height="400" alt="ESP and MLX90640">
+<img src="cable_setup.jpg" height="400" alt="Cable Setup">
+
+10.   **Print and assemble the enclosure**
    - Print the parts from the [3d_print folder](https://github.com/jannemannX/master-praktikum-SoSe24/edit/main/ice-detector/3d_print) or [Onshape](https://cad.onshape.com/documents/61ff36c19d567fb2cb1f912e/w/94b71816ca017b0d6549149e/e/821ef7029f7086ceb7cd349b?renderMode=0&uiState=671ccaab0768610ca459d367)
    - Glue the camera protection onto the lid
-   - Assemble the rest
+   - Assemble the enclosure as shown below (Use tape to fix the sensor, powerbank and button)
+   - Optional: use a small esp case for better protection
 
-# Usage
-TODO: Add usage instructions.
+<img src="assembly.jpeg" height="400" alt="Assembly">
