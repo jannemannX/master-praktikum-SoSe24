@@ -90,7 +90,6 @@ void loop()
     }
 
     // publish each row of the temperature grid
-    // investigate issue in general
     for (uint8_t y = 0; y < 24; y++)
     {
       String rowPayload = "";
