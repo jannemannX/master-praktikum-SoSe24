@@ -113,13 +113,13 @@ Our [demonstration process](https://cpee.org/hub/server/Teaching.dir/Prak.dir/TU
 
 ## Challenges
 
-### Infrared distortion and noise
+### Infrared Distortion and Noise
 Glass and especially plexiglass distort the infrared signal. This was a problem since we wanted to detect ice inside a plexiglass cup. The detection still works reliably as the temperature difference between ice and ambient is large enough. To further stabilize detection results however, we implemented a smoothing of the thermal data and used Chess Mode for the sensor, too avoid false positives caused by noisy readings.
 
-### 3D printing of enclosure
+### 3D Printing of Enclosure
 The 3D modelling and printing was very challenging as we had no prior experience with any of this. After countless iterations and a lot of help from the internet, we finally managed to print a working enclosure for the device, that holds together via a snap-fit mechanism and does not rely on screws or glue and therefore can be easily assembled and disassembled. In the process we learned a lot about 3D modelling and printing and are now the proud owner of a BambuLab A1 Mini.
 
-### MQTT Publish size limit
+### MQTT Publish Size Limit
 To reliably transmit the thermal data from the ESP32 to the Data Service, we had to split the data by the rows of the sensor and send them in multiple messages. This was necessary because the data was too large for the ESP32 to send in one message without significantly more complex communication, memory management and error handling. By publishing the data into multiple topics, we were able to keep the communication and the code simple and reliable.
 
 ## Future Work
@@ -127,10 +127,10 @@ To reliably transmit the thermal data from the ESP32 to the Data Service, we had
 ### Ice Detection Algorithm
 The current ice detection algorithm is based on a simple thresholding of the temperature data. Future work could include the implementation of a more sophisticated algorithm that takes into account the spatial distribution of the temperature data and the distance and size of the glass. This could be achieved by using machine learning techniques to train a model on a dataset of thermal images with and without ice. This was unnecessary for the current project, as the ice detection was already working reliably with the simple thresholding, but might be necessary for more complex use cases.
 
-### Limiting thermal noise
+### Limiting Thermal Noise
 Further research could be put into how to optimally shield the sensor from thermal noise. This could include modifying the enclosure to better shield the sensor from ambient temperature changes or by implementing a more sophisticated noise reduction algorithm in the software. Even with the noise we could reliably detect ice, but the system could be made more robust and less prone to fluctuation by reducing the noise.
 
-### Integration with other systems
+### Integration with other Systems
 As we build our system in a modular way, it is easy to integrate it with other systems. For example, it could be used to detect humans in an area without the them needing to move regularly as with a PIR sensor. The thermal camera could also be used to detect overheating in electrical systems or to detect the presence of a specific object in a room. The possibilities are countless, but applications needing more fine grained temperature data or a higher resolution would require a different (and more expensive) sensor.
 
 ## Conclusion
