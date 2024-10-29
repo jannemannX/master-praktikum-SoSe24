@@ -1,8 +1,8 @@
 # Ice Detection System using MLX90640
 
-This project implements an ice detection system using the **MLX90640 thermal sensor** and **ESP32 microcontroller**, inside a 3D printed enclosure as a "thermal camera" (Ice Detector Device). The Ice Detector Device communicates via MQTT to transfer raw thermal data to an HTTP service (Data Service) which exposes the data for further use. Another HTTP service (Prediction Service) is used to detect if or how much ice is present from the thermal data. A complete ice detection process is implemented using the [Cloud Process Execution Engine](https://cpee.org) (CPEE) and can be found [here](https://cpee.org/hub/server/Teaching.dir/Prak.dir/TUM-Prak-24-SS.dir/IceDetectorDetection.xml).
+This project implements an ice detection system using the **MLX90640 thermal sensor** and **ESP32 microcontroller**, inside a 3D printed enclosure as a "thermal camera" (Ice Detector Device). The Ice Detector Device communicates via MQTT to transfer raw thermal data to an HTTP service which exposes the data for further use. Another HTTP service is used to detect if or how much ice is present from the thermal data. A complete ice detection process is implemented using the [Cloud Process Execution Engine](https://cpee.org) (CPEE) and can be found [here](https://cpee.org/hub/server/Teaching.dir/Prak.dir/TUM-Prak-24-SS.dir/IceDetectorDetection.xml).
 
-Details about the setup and usage of each part of the system can be found in the respective READMEs:
+Technical details and setup instructions about each part of the system can be found in the respective READMEs:
 - [Ice Detector Device README](https://github.com/jannemannX/master-praktikum-SoSe24/blob/main/ice-detector/README.md)
 - [Data Service README](https://github.com/jannemannX/master-praktikum-SoSe24/blob/main/data-service/README.md)
 - [Prediction Service README](https://github.com/jannemannX/master-praktikum-SoSe24/blob/main/prediction-service/README.md)
