@@ -63,6 +63,8 @@ The goal was to find a fun, modular and reusable way to detect if there was any 
 
 Our [ice detection process](https://cpee.org/hub/server/Teaching.dir/Prak.dir/TUM-Prak-24-SS.dir/IceDetectorDetection.xml) utilizes the data and prediction service to detect the presence of ice in a glass. It is meant to be used as a subprocess by other processes to know whether any ice is present in the glass (retrieved via the result data object). For this we created a plethora of Cobot programs for the sake of modularity, which we call via the REST API provided by the Lab Machine. 
 
+---
+
 First we put down the glass and turn on the device by letting the robot press the button, the height of the button was carefully chosen to avoid the robot accidently pressing it while gripping the device. Then we pickup the device and move it down from the ice machine. Before directly going to the picture spot we had to change grip, due the range limit of the robot arm in combination with objects in the workspace which block free movement close to the ground.  
 
 <div style="text-align: center;">
@@ -77,6 +79,9 @@ First we put down the glass and turn on the device by letting the robot press th
   <em>The same but in the real world (2x speed)</em>
 </div>
 
+---
+
+
 In the next group of steps we perform the actual detection of ice by first waiting 5 seconds to let the image stabilize and then gathering the temperature data (temperature grid & ambient temperature) from the data service. We then send this data to the prediction service to get the result of the ice detection. The result is then stored in a data element and can be used by the parent process to decide what to do next.
 
 <div style="text-align: center;">
@@ -84,6 +89,8 @@ In the next group of steps we perform the actual detection of ice by first waiti
   <br>
   <em>Ice detection in the CPEE</em>
 </div>
+
+---
 
 In the end we put the device back to its original position, turn it off by pressing the button again and move into the starting position above the glass to be ready for the next step in the parent process.
 
